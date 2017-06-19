@@ -9,7 +9,7 @@ mkdir -p $GRIDAPPSD_INSTALL/builds
 #----------------
 # fncs setup
 #----------------
-export FNCS_INSTALL=$GRIDAPPSD_INSTALL/builds/test
+export FNCS_INSTALL=$GRIDAPPSD_INSTALL/builds
 
 cd /tmp
 wget http://download.zeromq.org/zeromq-3.2.4.tar.gz
