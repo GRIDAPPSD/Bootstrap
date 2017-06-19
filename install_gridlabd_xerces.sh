@@ -6,8 +6,8 @@ mkdir -p $GRIDAPPSD_INSTALL/sources
 
 mkdir -p $GRIDAPPSD_INSTALL/builds
 
-export GLD_INSTALL=$GRIDAPPSD_INSTALL/builds/test
-export FNCS_INSTALL=$GRIDAPPSD_INSTALL/builds/test
+export GLD_INSTALL=$GRIDAPPSD_INSTALL/builds
+export FNCS_INSTALL=$GRIDAPPSD_INSTALL/builds
 
 #----------------
 # xerces setup
