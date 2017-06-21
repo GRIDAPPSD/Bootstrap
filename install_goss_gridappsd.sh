@@ -17,6 +17,10 @@ chmod a+x build-goss-test.sh
 chmod a+x run-goss-test.sh
 ./build-goss-test.sh
 mkdir -p $GRIDAPPSD_INSTALL/builds/log
+mkdir -p $GRIDAPPSD_INSTALL/builds/lib/conf
+cp conf/* $GRIDAPPSD_INSTALL/builds/lib/conf
+
+
 
 #----------------
 # mysql setup
