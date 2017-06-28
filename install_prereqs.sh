@@ -21,6 +21,7 @@ npm install -g express
 npm install -g ejs
 npm install -g typescript
 npm install -g typings
+npm install -g webpack
 
 
 
