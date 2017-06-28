@@ -35,5 +35,6 @@ cd $GRIDAPPSD_INSTALL/sources
 git clone https://github.com/GRIDAPPSD/viz.git
 cd viz
 npm install
+webpack
 
 
