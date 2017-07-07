@@ -1,5 +1,12 @@
 export GRIDAPPSD_INSTALL=/home/gridappsd/gridappsd_project
 
+
+
+#----------------
+# mysql setup
+#---------------- 
+mysql -u root -pgridappsd1234 < gridappsd_mysql_dump.sql
+
 mkdir -p $GRIDAPPSD_INSTALL
 
 mkdir -p $GRIDAPPSD_INSTALL/sources
@@ -22,11 +29,6 @@ cp conf/* $GRIDAPPSD_INSTALL/builds/lib/conf
 
 
 
-#----------------
-# mysql setup
-#---------------- 
-mysql -u root -pgridappsd1234 < /tmp/gridappsd_mysql_dump.sql
-
 
 #----------------
 # goss gridapps-d setup
@@ -37,4 +39,4 @@ cd viz
 npm install
 webpack
 
-
+wget https://downloads.sourceforge.net/project/bigdata/bigdata/2.1.1/blazegraph.jar -O $GRIDAPPSD_INSTALL/builds/lib/blazegraph.jar
