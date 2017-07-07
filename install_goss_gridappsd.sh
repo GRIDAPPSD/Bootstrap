@@ -1,11 +1,11 @@
 export GRIDAPPSD_INSTALL=/home/gridappsd/gridappsd_project
 
-
+BOOTSTRAP_HOME=`pwd`
 
 #----------------
 # mysql setup
 #---------------- 
-mysql -u root -pgridappsd1234 < gridappsd_mysql_dump.sql
+mysql -u root -pgridappsd1234 < $BOOTSTRAP_HOME/gridappsd_mysql_dump.sql
 
 mkdir -p $GRIDAPPSD_INSTALL
 
@@ -25,7 +25,7 @@ chmod a+x run-goss-test.sh
 ./build-goss-test.sh
 mkdir -p $GRIDAPPSD_INSTALL/builds/log
 mkdir -p $GRIDAPPSD_INSTALL/builds/lib/conf
-cp conf/* $GRIDAPPSD_INSTALL/builds/lib/conf
+cp $BOOTSTRAP_HOME/conf/* $GRIDAPPSD_INSTALL/builds/lib/conf
 
 
 
