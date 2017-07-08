@@ -5,7 +5,7 @@ BOOTSTRAP_HOME=`pwd`
 #----------------
 # mysql setup
 #---------------- 
-mysql -u root -pgridappsd1234 < $BOOTSTRAP_HOME/gridappsd_mysql_dump.sql
+mysql -u root -pgridappsd1234 < /tmp/gridappsd_mysql_dump.sql
 
 mkdir -p $GRIDAPPSD_INSTALL
 
@@ -18,14 +18,13 @@ mkdir -p $GRIDAPPSD_INSTALL/builds
 #----------------
 cd $GRIDAPPSD_INSTALL/sources
 
-git clone https://github.com/GRIDAPPSD/GOSS-GridAPPS-D.git
+git clone https://github.com/tdtalbot/GOSS-GridAPPS-D.git
 cd GOSS-GridAPPS-D
 chmod a+x build-goss-test.sh
 chmod a+x run-goss-test.sh
 ./build-goss-test.sh
 mkdir -p $GRIDAPPSD_INSTALL/builds/log
-mkdir -p $GRIDAPPSD_INSTALL/builds/lib/conf
-cp $BOOTSTRAP_HOME/conf/* $GRIDAPPSD_INSTALL/builds/lib/conf
+
 
 
 
