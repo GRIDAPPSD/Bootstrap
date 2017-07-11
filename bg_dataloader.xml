@@ -9,6 +9,7 @@
 	     <!-- Zero or more files or directories containing the data to be loaded. 
                    This should be a comma delimited list. The files must be readable by the web application. -->
            <entry key="fileOrDirs">/tmp/ieee8500.xml</entry>
-		   
+		    <!-- The configuration file for the database instance. It must be readable by the web application. --> 
+           <entry key="propertyFile">/home/gridappsd/gridappsd_project/builds/lib/conf/rwstore.properties</entry> 
 		   <!-- For more parameters see instructions at https://wiki.blazegraph.com/wiki/index.php/REST_API#INSERT_RDF_.28POST_with_Body.29 -->
       </properties>
