@@ -43,9 +43,9 @@ webpack
 # goss gridapps-d blazegraph setup
 #----------------
 wget https://downloads.sourceforge.net/project/bigdata/bigdata/2.1.1/blazegraph.jar -O $GRIDAPPSD_INSTALL/builds/lib/blazegraph.jar
-java -jar blazegraph.jar >> $GRIDAPPSD_PROJECT/builds/log/blazegraph.log 2>&1 &
+java -jar blazegraph.jar >> $GRIDAPPSD_INSTALL/builds/log/blazegraph.log 2>&1 &
 BGPID=`echo $!`
-curl -X POST --data-binary @/tmp/ieee8500.xml --header 'Content-Type:application/xml' http://localhost:9999/bigdata/dataloader
+curl -X POST --data-binary @/tmp/bg_dataloader.xml --header 'Content-Type:application/xml' http://localhost:9999/bigdata/dataloader
 kill $BGPID
 
 

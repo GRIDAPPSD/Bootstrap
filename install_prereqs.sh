@@ -8,7 +8,7 @@
 #----------------
 apt update -y 
 
-apt install -y vim git automake default-jdk g++ gcc python python-pip libtool apache2 gradle nodejs-legacy npm
+apt install -y vim git automake default-jdk g++ gcc python python-pip libtool apache2 gradle nodejs-legacy npm curl
 
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password gridappsd1234'
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password gridappsd1234'
