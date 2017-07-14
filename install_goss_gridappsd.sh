@@ -12,7 +12,8 @@ mkdir -p $GRIDAPPSD_INSTALL
 mkdir -p $GRIDAPPSD_INSTALL/sources
 
 mkdir -p $GRIDAPPSD_INSTALL/builds
-
+#TODO remove need for this directory (currently used by fncs_goss_bridge, it should go elsewhere)
+mkdir -p /home/gridappsd/var/log
 #----------------
 # goss gridapps-d setup
 #----------------
@@ -43,7 +44,8 @@ webpack
 # goss gridapps-d blazegraph setup
 #----------------
 wget https://downloads.sourceforge.net/project/bigdata/bigdata/2.1.1/blazegraph.jar -O $GRIDAPPSD_INSTALL/builds/lib/blazegraph.jar
-java -Dbigdata.propertyFile=$GRIDAPPSD_INSTALL/builds/lib/conf/rwstore.properties -jar blazegraph.jar >> $GRIDAPPSD_INSTALL/builds/log/blazegraph.log 2>&1 &
+sleep 2
+java -Dbigdata.propertyFile=$GRIDAPPSD_INSTALL/builds/lib/conf/rwstore.properties -jar $GRIDAPPSD_INSTALL/builds/lib/blazegraph.jar >> $GRIDAPPSD_INSTALL/builds/log/blazegraph.log 2>&1 &
 BGPID=`echo $!`
 curl -X POST --data-binary @/tmp/bg_dataloader.xml --header 'Content-Type:application/xml' http://localhost:9999/bigdata/dataloader
 kill $BGPID

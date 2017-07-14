@@ -16,6 +16,7 @@ apt install -y mysql-server
 
 pip install --upgrade pip
 pip install stomp.py
+pip install pyyaml
 
 npm install -g express
 npm install -g ejs
