@@ -29,6 +29,6 @@ npm install -g webpack
 export GRIDAPPSD_INSTALL=/home/gridappsd/gridappsd_project
 
 
-mkdir -p $GRIDAPPSD_INSTALL/builds/lib/conf
-cp -n conf/* $GRIDAPPSD_INSTALL/builds/lib/conf
+mkdir -p $GRIDAPPSD_INSTALL/builds/conf
+cp -n conf/* $GRIDAPPSD_INSTALL/builds/conf
 chown -R gridappsd:gridappsd $GRIDAPPSD_INSTALL
