@@ -15,11 +15,11 @@ mkdir -p $GRIDAPPSD_INSTALL/builds
 #TODO remove need for this directory (currently used by fncs_goss_bridge, it should go elsewhere)
 mkdir -p /home/gridappsd/var/log
 #----------------
-# goss gridapps-d setup
+# goss gridapps-d setup 
 #----------------
 cd $GRIDAPPSD_INSTALL/sources
 
-git clone https://github.com/tdtalbot/GOSS-GridAPPS-D.git
+git clone https://github.com/GRIDAPPSD/GOSS-GridAPPS-D.git
 cd GOSS-GridAPPS-D
 chmod a+x build-goss-test.sh
 chmod a+x run-goss-test.sh
