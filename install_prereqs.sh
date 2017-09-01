@@ -24,7 +24,10 @@ npm install -g typescript
 npm install -g typings
 npm install -g webpack
 
-
+cp ieee8500.xml /tmp
+cp gridappsd_mysql_dump.sql /tmp
+chmod a+r /tmp/*.xml
+chmod a+r /tmp/*.sql
 
 export GRIDAPPSD_INSTALL=/home/gridappsd/gridappsd_project
 
