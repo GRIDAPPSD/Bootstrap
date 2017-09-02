@@ -23,11 +23,8 @@ cp gridappsd_mysql_dump.sql /tmp
 chmod a+r /tmp/gridappsd_mysql_dump.sql
 cp ieee8500.xml /tmp
 chmod a+r /tmp/ieee8500.xml
-cp bg_dataloader.xml /tmp
-chmod a+r /tmp/bg_dataloader.xml
 
 su gridappsd -c "./install_goss_gridappsd.sh"
 
 rm /tmp/gridappsd_mysql_dump.sql
-rm /tmp/ieee8500.xml
-rm /tmp/bg_dataloader.xml
+#rm /tmp/ieee8500.xml
