@@ -5,7 +5,7 @@ BOOTSTRAP_HOME=`pwd`
 #----------------
 # mysql setup
 #---------------- 
-mysql -u root -pgridappsd1234 < /tmp/gridappsd_mysql.sql
+mysql -u root -pgridappsd1234 < /tmp/gridappsd_mysql_dump.sql
 
 mkdir -p $GRIDAPPSD_INSTALL
 
