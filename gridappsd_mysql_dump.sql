@@ -18,7 +18,8 @@ USE gridappsd;
 DROP TABLE IF EXISTS `log`;
 CREATE TABLE `log` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `process_id` varchar(200) NOT NULL,
+  `source` varchar(45) NOT NULL,
+  `process_id` varchar(200) DEFAULT NULL,
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `log_message` varchar(500) NOT NULL,
   `log_level` varchar(5) NOT NULL,
