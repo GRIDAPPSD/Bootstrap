@@ -21,7 +21,7 @@ CREATE TABLE `log` (
   `source` varchar(45) NOT NULL,
   `process_id` varchar(200) DEFAULT NULL,
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `log_message` varchar(5000) NOT NULL,
+  `log_message` TEXT NOT NULL,
   `log_level` varchar(5) NOT NULL,
   `process_status` varchar(8) NOT NULL,
   `username` varchar(45) NOT NULL,
