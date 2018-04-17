@@ -18,12 +18,12 @@ USE gridappsd;
 DROP TABLE IF EXISTS `log`;
 CREATE TABLE `log` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `source` varchar(45) NOT NULL,
-  `process_id` varchar(200) DEFAULT NULL,
+  `source` varchar(255) NOT NULL,
+  `process_id` varchar(255) DEFAULT NULL,
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `log_message` TEXT NOT NULL,
-  `log_level` varchar(5) NOT NULL,
-  `process_status` varchar(8) NOT NULL,
-  `username` varchar(45) NOT NULL,
+  `log_level` varchar(20) NOT NULL,
+  `process_status` varchar(20) NOT NULL,
+  `username` varchar(20) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8 COMMENT='This table contain log messages and status from variaous processes in gridappsd platform.';
