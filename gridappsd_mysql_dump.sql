@@ -25,6 +25,7 @@ CREATE TABLE `log` (
   `log_level` varchar(20) NOT NULL,
   `process_status` varchar(20) NOT NULL,
   `username` varchar(20) NOT NULL,
+  `process_type` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8 COMMENT='This table contain log messages and status from variaous processes in gridappsd platform.';
 
