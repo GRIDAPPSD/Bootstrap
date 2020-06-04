@@ -32,15 +32,22 @@ CREATE TABLE `log` (
 --
 -- Table structure for table `expected_results`
 --
-DROP TABLE IF EXISTS `expected_results`;
-CREATE TABLE `expected_results` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `test_id` varchar(255) DEFAULT NULL,
-  `process_id` varchar(255) DEFAULT NULL,
-  `mrid` varchar(255) NOT NULL,
-  `property` varchar(255) NOT NULL,
-  `expected` varchar(255) NOT NULL,
-  `actual` varchar(255)  NOT NULL,
-  `simulation_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8 COMMENT='This table contains the messages for the expected results';
+    DROP TABLE IF EXISTS `expected_results`;
+    CREATE TABLE `expected_results` (
+      `id` int(11) NOT NULL AUTO_INCREMENT,
+      `app_id` varchar(255) DEFAULT NULL,
+      `test_id` varchar(255) DEFAULT NULL,
+      `process_id_one` varchar(255) DEFAULT NULL,
+      `process_id_two` varchar(255) DEFAULT NULL,
+      `index_one` LONG DEFAULT NULL,
+      `index_two` LONG DEFAULT NULL,
+      `mrid` varchar(255) NOT NULL,
+      `property` varchar(255) NOT NULL,
+      `expected` varchar(255) NOT NULL,
+      `actual` varchar(255)  NOT NULL,
+      `difference_direction` varchar(255) NOT NULL,
+      `difference_mrid` varchar(255)  NOT NULL,
+      `match_flag` BOOL NOT NULL,
+      `simulation_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+      PRIMARY KEY (`id`)
+    ) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8 COMMENT='This table contains messages for expected results';
